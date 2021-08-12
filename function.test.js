@@ -52,12 +52,27 @@ test('work should be in employee',()=>{
 })
 
 //working with async data
-// test("user fetched name should be Leanne Graham",()=>{
-//     expect.assertions(1)
-//     return functions.fetchUserData()
-//     .then(data=>{expect(data.name).toEqual("Leanne Graham")})
-// })
+test("user fetched name should be Leanne Graham",()=>{
+    expect.assertions(1);
+    return functions.fetchUserData()
+    .then(data=>{expect(data.name).toEqual("Leanne Graham")})
+})
 
 
+//Object Assignment matchers
+test('object assignment', () => {
+    const data = {one: 1};
+    data['two'] = 2;
+    expect(data).toEqual({one: 1, two: 2});
+  });
 
 
+//checking the opposite of a matcher 
+
+test('adding positive numbers is not zero', () => {
+    for (let a = 5; a < 10; a++) {
+      for (let b = 5; b < 10; b++) {
+        expect(a + b).not.toBe(0);
+      }
+    }
+  });

@@ -1,4 +1,4 @@
-//onst axios = require("axios");
+const axios = require("axios");
 
 const functions = {
     add: (number1, number2) => number1 + number2,
