@@ -23,4 +23,12 @@ afterEach(()=>{
     console.warn("after data")
 })
 
+beforeAll(()=>{
+    console.warn("data testing started")
+})
+
+afterAll(()=>{
+    console.warn("data testing ended")
+})
+
 //Note even though the before and after each fxns is written only once but it will execute same no of times as test fnx gets called
